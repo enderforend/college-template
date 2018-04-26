@@ -95,7 +95,7 @@ img {
 body {
   margin: 0;
   padding-top: 40px;
-  background: #eef3f5;
+  background: #f3f7fd;
   color: #131313;
   font-family: "Roboto", sanf-serif;
   font-size: 14px;
@@ -127,8 +127,26 @@ h2 {
   border-radius: 50%;
 }
 
+input {
+  border: solid 1px;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  border: solid 1px;
+  border-radius: 2px;
+  padding: 10px;
+  max-width: 100%;
+  max-height: 400px;
+  background: #fff;
+}
+
 a {
   color: #009adf;
+  text-decoration: none;
 }
 
 .btn {
@@ -208,7 +226,7 @@ a {
   padding: 0;
   list-style: none;
   z-index: 9;
-  background-color: #fefefe;
+  background-color: #d4d9e2;
 }
 .top-nav_menu_sub li {
   margin-right: 0;
@@ -371,9 +389,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 80px;
+  height: auto;
   background-color: #fff;
   text-transform: uppercase;
+  color: #009adf;
 }
 
 .post {
@@ -455,8 +474,160 @@ a {
   border-radius: 50%;
 }
 
-/*Category */
-/*Object-page */
+/*feedback */
+.feedback {
+  color: #131313;
+  margin-top: 30px;
+}
+.feedback form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.feedback form label {
+  margin-top: 10px;
+}
+
+.form-button {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.form-button_btn {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: #009adf;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.form-button_btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Persons */
+.persons {
+  margin-top: 20px;
+}
+.persons .person {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.persons .person img {
+  width: 100%;
+  height: auto;
+}
+.persons .person_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  padding-bottom: 0;
+  margin-left: 10px;
+  background: #d4d9e2;
+  width: 100%;
+}
+.persons .person_description h3 {
+  margin-top: 0;
+}
+.persons .person .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+}
+.persons .person .information_title {
+  text-transform: uppercase;
+}
+.persons .person .information_title_description {
+  margin-left: 30px;
+}
+
+.post_full {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
+  padding: 20px;
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+}
+.post_full p {
+  margin: 0;
+}
+
+.category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #d4d9e2;
+  border-bottom: 1px solid #d4d9e2;
+  padding: 10px;
+  text-transform: uppercase;
+}
+.category .category_name {
+  margin-left: 10px;
+}
+
+.comments {
+  margin-top: 30px;
+}
+.comments-pub {
+  margin: 10px;
+}
+.comments-pub h3 {
+  margin: 0;
+  padding: 10px;
+}
+.comments-pub_msg {
+  max-width: 75%;
+  background-color: #fff;
+  padding: 10px;
+}
+.comments_form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.comments_form form label {
+  font-size: 18px;
+}
+.comments_form form input {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
 /* Адапитивный сайт */
 @media (max-width: 767px) {
   html {
@@ -498,6 +669,11 @@ a {
   }
   .left-sidebar_object__active {
     display: block !important;
+  }
+
+  .title-area {
+    padding: 5px;
+    font-size: 16px;
   }
 
   .footer small {

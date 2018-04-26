@@ -30,9 +30,23 @@ h2
   img
     background: #fff
     border: solid 4px transparent 
-    border-radius: 50% 
+    border-radius: 50%
+input
+  border: solid 1px
+  border-radius: 2px
+  display: block
+  width: 100%
+  padding: 10px
+textarea
+  border: solid 1px
+  border-radius: 2px
+  padding: 10px
+  max-width: 100%
+  max-height: 400px
+  background: $white
 a
  color: $active-color
+ text-decoration: none
 .btn
  padding: 20px 30px
  display: inline-block
@@ -222,9 +236,10 @@ a
   justify-content: center
   align-items: center
   width: 100%
-  height: 80px
+  height: auto
   background-color: #fff
   text-transform: uppercase
+  color: $active-color
 .post
   margin-top: 50px
   a, h2
@@ -283,6 +298,100 @@ a
      text-align: center
      line-height: 32px
      border-radius: 50%
-/*Category*/
-/*Object-page*/
+/*feedback*/
+.feedback
+  color: $dark
+  margin-top: 30px
+  form
+    display: flex
+    flex-direction: column
+    label
+      margin-top: 10px
+    
+.form-button
+  margin-top: 10px
+  display: flex
+  justify-content: flex-end
+  &_btn
+    font-family: 'Roboto', 'Helvetica', sans-serif
+    width: 100px
+    height: 40px
+    border: none
+    background-color: $active-color
+    color: $white
+    text-transform: uppercase
+    font-weight: 400
+    a
+      color: $white
+      text-decoration: none
+/*Persons*/
+.persons
+  margin-top: 20px
+  .person
+    margin-top: 20px
+    display: flex
+    img
+      width: 100%
+      height: auto
+    &_description
+      display: flex
+      flex-direction: column
+      padding: 10px
+      padding-bottom: 0
+      margin-left: 10px
+      background: $card
+      width: 100%
+      h3
+        margin-top: 0
+    .information
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 15px
+      &_title
+        text-transform: uppercase
+        &_description
+          margin-left: 30px
+// Post
+.post_full
+  background-color: rgba($white, 0.6)
+  padding-top: 10px
+  padding: 20px
+  font-family: 'Roboto', 'Helvetica', sans-serif
+  font-size: 16px
+  line-height: 2
+  p
+    margin: 0
+.category
+  display: flex
+  flex-direction: row
+  border-top: 1px solid $gray
+  border-bottom: 1px solid $gray
+  padding: 10px
+  text-transform: uppercase
+  .category_name
+    margin-left: 10px
+.comments
+  margin-top: 30px
+  &-pub
+    margin: 10px 
+    h3
+      margin: 0
+      padding: 10px
+    &_msg
+      max-width: 75%
+      background-color: $white
+      padding: 10px
+
+  &_form
+    form
+      display: flex
+      flex-direction: column
+      label
+        font-size: 18px
+      input
+        margin-bottom: 20px
+        padding: 10px
+      
+        
 @import "media"
