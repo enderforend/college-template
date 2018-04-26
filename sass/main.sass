@@ -1,0 +1,288 @@
+/*Интегрирование переменных с цветами*/
+@import "color"
+@import "reset"
+@import "fontello"
+
+html
+ font-size: 10px
+
+img
+ max-width: 100%
+
+body
+ margin: 0
+ padding-top: 40px
+ background: $body-bg
+ color: $dark
+ font-family: "Roboto", sanf-serif
+ font-size: 14px
+h2
+ font-size: 24px
+
+.background-img
+  background: no-repeat center url(../img/strategiya.png)
+
+.emblem
+  display: flex
+  min-height: 100%
+  justify-content: center
+  align-items: start
+  img
+    background: #fff
+    border: solid 4px transparent 
+    border-radius: 50% 
+a
+ color: $active-color
+.btn
+ padding: 20px 30px
+ display: inline-block
+ background-color: $active-color
+ color: $white
+ border: none
+ border-radius: 4px
+ text-decoration: none
+ font-style: 16px
+ font-weight: 700
+ &-primary
+  background-color: $active-color
+  border-bottom: 5px solid darken($active-color, 10%)
+  &:hover
+   background-color: lighten($active-color, 5%)
+.top-nav
+ background-color: $white
+ padding: 15px
+ position: relative
+ border: 1px
+ img
+  height: 70px
+ &_btn
+  display: none
+  width: 30px
+  height: 30px
+  background-color: transparent
+  border: none
+  font-size: 18px
+  position: absolute
+  right: 15px
+  top: -50px
+  &:hover
+   cursor: pointer
+ &_menu
+  list-style: none
+  padding: 0px
+  display: flex
+  li
+   margin-right: 30px 
+   &:hover > ul.top-nav_menu_sub
+     display: block
+   &:active > ul.top-nav_menu_sub
+     display: block
+   a
+    text-transform: uppercase
+    text-decoration: none
+    color: $dark
+    font-weight: 700
+    &:hover
+     text-decoration: none
+     color: $active-color
+  
+  &_sub
+    display: none
+    min-width: 160px
+    position: absolute
+    left: 110px
+    top: 42px
+    padding: 0
+    list-style: none
+    z-index: 9
+    background-color: $gray
+    li
+      margin-right: 0
+      &:last-child
+        min-width: 150px
+      a
+        padding: 5px
+        display: block
+        text-transform: none
+        &::before
+          content: ''
+          border-top: 1px solid $dark
+        
+        &:hover
+          color: $white
+          background-color: $active-color
+
+//Sidebar  
+.left-sidebar
+ margin-top: 4rem //4rem = 40 px
+ background-color: $white
+ &_btn
+  display: none
+  background-color: $white
+  padding: 15px
+  position: relative
+  &:hover
+   cursor: pointer
+  &::after
+   content: ''
+   display: inline-block
+   position: absolute
+   margin-top: -10px
+   top: 50%
+   right: 25px
+   width: 15px
+   height: 15px
+   border-bottom: 1.5px solid $dark
+   border-left: 1.5px solid $dark
+   transform: rotate(-45deg)
+ 
+ &_object
+  padding: 30px
+
+  background-color: $white
+  &-description
+   padding: 30px
+   h3
+    text-transform: uppercase
+    font-weight: 400
+.content
+ margin-top: 40px
+ margin-bottom: 76px
+.directions
+ margin-top: 80px
+ &-block
+  background-color: $white
+  height: 220px
+  text-align: center
+  margin: 0 15px
+  padding: 10px
+  background-position: bottom center
+  background-repeat: no-repeat 
+  h3
+   color: $active-color
+.footer
+ margin-top: 60px
+ background-color: $dark
+ padding: 59px 0
+ color: $footer-text
+ &_menu
+   a
+     display: block
+   &_sub
+    display: block
+    min-width: 50px
+    position: inherit
+    left: 110px
+    top: 42px
+    padding: 0
+    list-style: none
+    z-index: 9
+    li
+      margin-left: 20px
+      margin-right: 0
+      &:last-child
+        min-width: 150px
+      a
+        padding: 5px
+        display: block
+        text-transform: none
+        &::before
+          content: ''
+          border-top: 1px solid $dark
+        &:hover
+          color: $white
+          background-color: $dark
+ &-policy-link
+  font-size: 12px
+ p
+  margin-bottom: 14px
+ a
+  color: $footer-text
+  text-decoration: none
+  &:hover
+   color: $white
+ ul
+  padding: 0px
+  list-style: none
+  li
+   line-height: 42px
+ &-contacts
+  text-align: right
+  &_phone
+   margin-top: 10px
+   margin-bottom: 20px !important
+   font-weight: 700
+   font-size: 20px
+   color: $active-color
+  
+
+// Content
+.title-area 
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 80px
+  background-color: #fff
+  text-transform: uppercase
+.post
+  margin-top: 50px
+  a, h2
+    text-decoration: none
+    margin-bottom: 0
+  &_description
+    width: 80%
+    p
+      margin-top: 0
+      
+  &_status
+    &_list
+      padding: 0
+      display: inline-flex
+      list-style: none
+      li
+        margin-right: 10px
+    h2
+      text-align: center
+    /*Section Team*/
+.team
+ text-align: center
+ h4
+  font-size: 18px
+  font-weight: 400
+  margin-bottom: 15px
+ p
+  margin-bottom: 40px
+/*Contacts*/
+.contacts
+ font-size: 18px
+ &-img
+  margin-right: 12px
+  vertical-align: middle
+  color: $active-color
+ &-adress
+  display: block
+  line-height: 2
+  margin-bottom: 20px
+ &-btn
+  margin-top: 36px
+ &-social-links
+  ul
+   list-style: none
+   margin-top: 45px
+   padding: 0
+   li
+    display: inline-block
+    a
+     display: inline-block
+     background-color: $active-color
+     color: $white
+     margin-right: 15px
+     width: 32px
+     height: 32px
+     text-align: center
+     line-height: 32px
+     border-radius: 50%
+/*Category*/
+/*Object-page*/
+@import "media"
