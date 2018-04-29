@@ -17,14 +17,8 @@ Template Name: Bog'lanish
 							</div>
 							<div class="feedback">
                                 <form action="">
-                                    <label for="input">Ismingiz</label><input type="text" placeholder="Yakubov Yakub Yakubovich">
-                                    <label for="input">Elektron pochtangiz</label><input type="text" placeholder="user@email.com">
-                                    <label for="input">Xabar mavzusi</label><input type="text" placeholder="Malumot">
-                                    <label for="input">Xabar</label><textarea name="..." id="" cols="30" rows="10"></textarea>
-                                    <div class="form-button">
-                                        <button class="form-button_btn"><a href="#">Jo'natish</a></button>
-                                    </div>
-                                </form>
+									<?php echo do_shortcode( '[contact-form-7 id="63" title="Contact form"]' )?> 
+								</form>
                             </div>
 							
 						</div>

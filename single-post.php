@@ -12,7 +12,7 @@
                             <div class="post_status">
                                 <div class="post_status_list">
                                     <li><i class="icon-user-circle-o"></i><?php the_author();	?></li>
-                                    <li><i class="icon-calendar"></i><?php the_time('j F Y');?> <?php the_time();?></li>
+                                    <li><i class="icon-calendar"></i><?php the_time('d.m.Y'); ?> <?php the_time();?></li>
                                     <li><i class="icon-comment"></i><?php $category = get_the_category(); 
                                                                     echo $category[0]->cat_name;?></li>
                                     </div>
@@ -24,25 +24,32 @@
                                 Kategoriya: <div class="category_name"><a href="<?php echo $category_link; ?>"><?php $category = get_the_category(); 
                                                                     echo $category[0]->cat_name;?></a></div>
                             </div>
-                            <div class="comments-pub">
-                                <h3>Rasul</h3>
-                                <div class="comments-pub_msg">
-                                    <p>Lorem ipsum, dolor sit amet consectetur
-                                     adipisicing elit. Veniam alias nulla 
-                                     tempore ullam repellat consequatur
-                                     nobis. Officiis vel quaerat dolores.</p>
-                                </div>
-                            </div>
-                            <div class="comments">
-                                <h2>Izoh qo'shish</h2>
-                                <div class="comments_form">
+                            
+                                  <div class="comments_form">
                                     <form action="">
-                                        <label for="input">Ism</label><input type="text" placeholder="Ismingiz">
-                                        <label for="">Xabar</label><textarea name="" id="" cols="30" rows="10"></textarea>
-                                        <div class="form-button">
-                                            <button class="form-button_btn"><a href="#">Jo'natish</a></button>
-                                        </div>
-                                    </form>
+                                            <?php comments_template();
+                                            
+                                            $args = array(
+                                                'walker'            => null,
+                                                'max_depth'         => '',
+                                                'style'             => 'ul',
+                                                'callback'          => null,
+                                                'end-callback'      => null,
+                                                'type'              => 'all',
+                                                'reply_text'        => 'Reply',
+                                                'page'              => '',
+                                                'per_page'          => '0   ',
+                                                'avatar_size'       => 64,
+                                                'reverse_top_level' => null,
+                                                'reverse_children'  => '',
+                                                'format'            => 'html5', // или xhtml, если HTML5 не поддерживается темой
+                                                'short_ping'        => false,    // С версии 3.6,
+                                                'echo'              => true,     // true или false
+                                            );
+                                            
+                                           
+                                            ?>
+                                       </form>
                                 </div>
                             </div>
 							

@@ -7,15 +7,11 @@
 		<meta name="author" content="">
 		<link rel="icon" href="#">
 
-		<title>Пикачу</title>
+		<title>PQXKHK | <?php the_title()?></title>
 
 
-		<!-- Bootstrap grid CSS -->
-		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
 		<!--Fonts Google-->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-		<!-- Custom styles for this template -->
-        <link href="css/main.css" rel="stylesheet">
         <?php wp_head();?>
 	</head>
 
@@ -34,6 +30,7 @@
 							<i class="icon-menu"></i>
 						</button>
 						<?php wp_nav_menu( array(
+							'menu'					=>		 'top_menu',
 							'container'		 		=>		 'ul',
 							'container_class' 		=>		 'top-nav_menu',
 							'menu_class'	 		=>		 'top-nav_menu',

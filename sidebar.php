@@ -3,10 +3,7 @@
 							Malumotlar
 						</div>
 						<div class="left-sidebar_object">
-							<?php?>
-						</div>
-						<div class="left-sidebar_object">
-							<img src="img/objects/strategiya.jpg" alt="">
+ 							 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
 						</div>
 						<!-- Sidebar OBJECTS -->
 						</div>
