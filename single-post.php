@@ -7,7 +7,7 @@
 					<div class="col-lg-8">
 						<div class="content">
 							<div class="title-area">
-								<h2><?php the_title(); ?></h2>
+								<h3><?php the_title(); ?></h3>
                             </div>
                             <div class="post_status">
                                 <div class="post_status_list">
@@ -15,6 +15,7 @@
                                     <li><i class="icon-calendar"></i><?php the_time('d.m.Y'); ?> <?php the_time();?></li>
                                     <li><i class="icon-comment"></i><?php $category = get_the_category(); 
                                                                     echo $category[0]->cat_name;?></li>
+                                    <li><i class="icon-eye"></i><?php echo get_post_meta ($post->ID,'views',true); ?></li>
                                     </div>
                                 </div>
 							<div class="post_full">
@@ -27,28 +28,7 @@
                             
                                   <div class="comments_form">
                                     <form action="">
-                                            <?php comments_template();
-                                            
-                                            $args = array(
-                                                'walker'            => null,
-                                                'max_depth'         => '',
-                                                'style'             => 'ul',
-                                                'callback'          => null,
-                                                'end-callback'      => null,
-                                                'type'              => 'all',
-                                                'reply_text'        => 'Reply',
-                                                'page'              => '',
-                                                'per_page'          => '0   ',
-                                                'avatar_size'       => 64,
-                                                'reverse_top_level' => null,
-                                                'reverse_children'  => '',
-                                                'format'            => 'html5', // или xhtml, если HTML5 не поддерживается темой
-                                                'short_ping'        => false,    // С версии 3.6,
-                                                'echo'              => true,     // true или false
-                                            );
-                                            
-                                           
-                                            ?>
+                                            <?php comments_template();?>
                                        </form>
                                 </div>
                             </div>

@@ -11,9 +11,6 @@ Template Name: Rahbariyat
 					<!-- /.col-md-4 -->
 					<div class="col-lg-8">
 						<div class="content">
-							<div class="title-area">
-								<h2><?php the_title()?></h2>
-							</div>
 							<div class="persons">
                                 <?php
                                     // параметры по умолчанию
@@ -52,9 +49,8 @@ Template Name: Rahbariyat
                                             
                                         <?php 
                                         }
-                                        
+                                        wp_reset_postdata(); // сброс
                                     ?>
-                                    <?php wp_reset_postdata(); // сброс ?>
                                 
                                 </div>
                             </div>

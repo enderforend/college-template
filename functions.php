@@ -44,4 +44,5 @@ if ( function_exists( 'add_image_size' ) ) {
 // Personal post type
 
 require get_template_directory() . '/custom-types.php';
+require get_template_directory() . '/views-counter.php';
 

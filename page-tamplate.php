@@ -13,9 +13,6 @@ Template Post Name: Postlar
 					<!-- /.col-md-4 -->
 					<div class="col-lg-8">
 						<div class="content">
-							<div class="title-area">
-								<h2><?php the_title(); ?></h2>
-							</div>
 							<div class="post_full">
                                 <p><?php the_content(); ?></p>
                             </div>

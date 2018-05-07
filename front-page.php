@@ -11,9 +11,6 @@ Template Name: Bosh Sahifa
 					<!-- /.col-md-4 -->
 					<div class="col-lg-8">
 						<div class="content">
-							<div class="title-area">
-								<h2><?php the_title(); ?></h2>
-							</div>
 							<div class="posts">
 								<?php
 									// параметры по умолчанию
@@ -34,21 +31,22 @@ Template Name: Bosh Sahifa
 									foreach($posts as $post){ setup_postdata($post);
 										?> 
 										<div class="post">
-											<h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
-											<div class="post_status">
-												<ul class="post_status_list">
-													<li><i class="icon-user-circle-o"></i><?php the_author();?></li>
-													<li><i class="icon-calendar"></i><?php the_time('d.m.Y'); ?> <?php the_time();?></li>
-													<li><i class="icon-comment"></i><?php $category = get_the_category();
-																					echo $category[0]->cat_name;?></li>
-													<li>Просмотров: <?php do_action( 'pageviews' ); ?></li>
-												</ul>
-											</div>
-											<div class="post_description">
-												<p>
-													<?php the_excerpt();?>
-												</p>
-											</div>
+											<h3><a href="<?php the_permalink()?>"><?php the_title()?></a></h3>
+											<div class="post-preview"></div>
+												<div class="post_status">
+													<ul class="post_status_list">
+														<li><i class="icon-user-circle-o"></i><?php the_author();?></li>
+														<li><i class="icon-calendar"></i><?php the_time('d.m.Y'); ?> <?php the_time();?></li>
+														<li><i class="icon-comment"></i><?php $category = get_the_category();
+																						echo $category[0]->cat_name;?></li>
+														<li><i class="icon-eye"></i><?php echo get_post_meta ($post->ID,'views',true); ?></li>
+													</ul>
+												</div>
+												<div class="post_description">
+													<p>
+														<?php the_excerpt();?>
+													</p>
+												</div>
 										</div>
 											
 										<?php 
